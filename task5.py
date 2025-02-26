@@ -12,6 +12,7 @@ File = namedtuple('File', ['name', 'extensions', 'dir', 'parent'])
 
 
 def read_dir(dir_path: Path) -> None:
+    # Информация о каталоге
     if not dir_path.is_dir():
         raise ValueError(f'{dir_path} не является каталогом')
     if not dir_path.exists():
