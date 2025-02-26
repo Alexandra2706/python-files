@@ -2,6 +2,8 @@ from datetime import datetime, timedelta, date
 
 
 def next_date(days: int) -> date:
+    # принимает количество дней от текущей даты
+    # возвращает дату, которая наступит через указанное количество дней
     current_date = datetime.now()
     delta = timedelta(days=days)
     return (current_date + delta).strftime('%Y-%m-%d')
